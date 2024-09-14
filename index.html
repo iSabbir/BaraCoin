@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaraCoin - Premium Cryptocurrency Experience</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Global Styles */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+            color: #ffd700;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #141e30, #243b55);
+            padding: 70px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.7rem;
+            margin-top: 20px;
+            color: #ffd700;
+        }
+
+        .cta-button {
+            background-color: #ff6f00;
+            color: #fff;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
+            display: inline-block;
+            margin-top: 35px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff8f00;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-light {
+            background-color: #1d1f21;
+            padding: 100px 20px;
+            text-align: center;
+            color: #f4f4f4;
+        }
+
+        .section h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: #c0c0c0;
+        }
+
+        .section-special {
+            background: linear-gradient(135deg, #1d4350, #a43931);
+            color: #fff;
+        }
+
+        .referral-bonus {
+            background-color: #ff6f00;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .referral-bonus h3 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .referral-bonus p {
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        /* Airdrop Details */
+        .airdrop-details {
+            background-color: #212529;
+            color: #fff;
+            padding: 60px;
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+            text-align: left;
+            position: relative;
+        }
+
+        .airdrop-details h3 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .airdrop-details ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.5rem;
+            margin-top: 25px;
+            line-height: 2;
+        }
+
+        .airdrop-details ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 50px;
+            color: #ffd700;
+        }
+
+        .airdrop-details ul li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: #ff6f00;
+        }
+
+        .airdrop-icon {
+            position: absolute;
+            top: -70px;
+            left: -70px;
+            font-size: 140px;
+            opacity: 0.05;
+        }
+
+        /* Roadmap */
+        .roadmap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 80px;
+            margin-top: 60px;
+        }
+
+        .roadmap .phase {
+            flex: 1;
+            margin: 20px;
+            padding: 50px;
+            background-color: #1d1f21;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .roadmap .phase:hover {
+            transform: scale(1.05);
+        }
+
+        .roadmap .phase h3 {
+            font-size: 2.8rem;
+            color: #ff6f00;
+            margin-bottom: 20px;
+        }
+
+        .roadmap .phase p {
+            font-size: 1.3rem;
+            color: #c0c0c0;
+        }
+
+        /* Exchanger Logos */
+        .exchangers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .exchangers img {
+            width: 120px;
+            height: auto;
+            filter: grayscale(100%);
+            margin: 10px;
+            transition: filter 0.3s ease;
+        }
+
+        .exchangers img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #141e30;
+            padding: 40px 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1.4rem;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            color: #ffd700;
+            font-size: 1.8rem;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            .cta-button {
+                padding: 15px 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 50px;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            header p {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 70px 15px;
+            }
+
+            .roadmap {
+                flex-direction: column;
+            }
+
+            .roadmap .phase {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                padding: 10px 30px;
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 2.5rem;
+            }
+
+            .section p {
+                font-size: 1.2rem;
+            }
+
+            .roadmap {
+                padding: 50px 15px;
+            }
+
+            .roadmap .phase {
+                padding: 30px;
+            }
+
+            .exchangers img {
+                width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fab fa-bitcoin"></i> BaraCoin</h1>
+    <p>The Premium Cryptocurrency Experience Starts Here</p>
+    <a href="#" class="cta-button">Join the Airdrop</a>
+</header>
+
+<section class="section section-special">
+    <h2><i class="fas fa-gift"></i> Phase 1: $5 Airdrop Giveaway</h2>
+    <p>We are giving away $5 worth of BaraCoin to 300 lucky users! Join now to claim your share and refer friends to boost your chances for extra rewards.</p>
+    <div class="referral-bonus">
+        <h3>Referral Bonus Program</h3>
+        <p>Invite your friends to earn additional BaraCoins. The top referrers will receive exclusive bonus rewards. The more you refer, the more you earn!</p>
+    </div>
+</section>
+
+<section class="section section-light">
+    <h2><i class="fas fa-cogs"></i> Phase 2: BaraCoin Mining & Web App Launch</h2>
+    <p>Get ready to mine BaraCoin through our revolutionary Telegram Web App. Start building your coin portfolio seamlessly across all your devices.</p>
+    <a href="#" class="cta-button">Learn More</a>
+</section>
+
+<section class="section section-special">
+    <h2><i class="fas fa-chart-line"></i> Phase 3: Exchange Listings on Major Platforms</h2>
+    <p>Once BaraCoin completes the airdrop and mining phases, it will be listed on major exchanges including Binance, KuCoin, OKX, and more. Stay updated on the latest listings!</p>
+
+    <!-- Exchanger Logos -->
+    <div class="exchangers">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Binance.png/640px-Binance.png" alt="Binance">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Kucoin.png/640px-Kucoin.png" alt="KuCoin">
+        <img src="https://cryptologos.cc/logos/okex-okb-logo.png" alt="OKX">
+        <img src="https://cryptologos.cc/logos/bitget-logo.png" alt="Bitget">
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="airdrop-details">
+        <i class="fas fa-parachute-box airdrop-icon"></i>
+        <h3>How to Participate in the Airdrop</h3>
+        <ul>
+            <li>Join our Telegram Group to stay updated with live announcements.</li>
+            <li>Sign up for the BaraCoin Airdrop using your email address.</li>
+            <li>Refer friends using your special referral link to earn bonus entries.</li>
+            <li>Stay active in the community to boost your mining speed during the web app launch.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section section-light">
+    <h2><i class="fas fa-road"></i> Roadmap</h2>
+    <div class="roadmap">
+        <div class="phase">
+            <h3><i class="fas fa-bullhorn"></i> Phase 1</h3>
+            <p>$5 Airdrop Giveaway and Referral Program</p>
+        </div>
+        <div class="phase">
+            <h3><i class="fas fa-cogs"></i> Phase 2</h3>
+            <p>Launch of Telegram Web App & BaraCoin Mining</p>
+        </div>
+        <div class="phase">
+            <h3><i class="fas fa-chart-line"></i> Phase 3</h3>
+            <p>Listings on Binance, KuCoin, OKX, and other major platforms</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 BaraCoin | Your Premium Crypto Experience</p>
+    <div class="icon-container">
+        <a href="#" class="social-icons"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
